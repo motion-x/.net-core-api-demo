@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
+    <RootNamespace>DotNetCoreTestAPILib</RootNamespace>
+    <AssemblyName>DotNetCoreTestAPILib</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netstandard2.0\DotNetCoreTestAPILib.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard2.0\DotNetCoreTestAPILib.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LiteDB" Version="4.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DotNetCoreTestAPI.BLL.Interface\DotNetCoreTestAPI.BLL.Interfaces.csproj" />
+    <ProjectReference Include="..\DotNetCoreTestAPI.DAL.Interfaces\DotNetCoreTestAPI.DAL.Interfaces.csproj" />
+    <ProjectReference Include="..\DotNetCoreTestApi.Models\DotNetCoreTestApi.Models.csproj" />
+  </ItemGroup>
+
+</Project>
